@@ -1,0 +1,17 @@
+@import './defaults.less';
+
+.sliceTop (@color) {
+    position: relative;
+    &:after{
+        content:'';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        top: -@slant-height;
+        left: 0;
+        width: 100%;
+        background-size: cover;
+        border-bottom: @slant-height solid @color;
+        border-left: 100vw solid transparent;
+    }
+}
